@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
 
   # トップページのルーティング
-  get "/top", to: "inkouresii#top"
+  root "inkouresii#top"
+
 
   get "inko", to: "inkouresii#show", as: "inko"
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -17,5 +18,4 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root "posts#index"
 end
